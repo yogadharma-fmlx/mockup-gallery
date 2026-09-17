@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mockup Containers</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🗂️</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span class="brand-mark">MC</span>
+      <span>Mockup Containers</span>
+    </a>
+    <nav class="topbar-actions" id="nav" data-search="1"></nav>
+  </header>
+
+  <main class="page">
+    <div class="page-head">
+      <h1>Design gallery</h1>
+      <p id="count" class="muted">Loading…</p>
+    </div>
+
+    <div id="grid" class="grid" hidden></div>
+
+    <div id="empty" class="empty" hidden>
+      <h2>No mock-ups yet</h2>
+      <p class="muted">Upload a single <code>.html</code> file or a <code>.zip</code> containing HTML, CSS and JS.</p>
+      <a id="empty-action" class="btn btn-primary" href="/upload">Upload the first mock-up</a>
+    </div>
+
+    <p id="error" class="alert alert-error" hidden></p>
+  </main>
+
+  <template id="card-template">
+    <article class="card">
+      <a class="card-preview" target="_blank" rel="noopener">
+        <iframe loading="lazy" tabindex="-1" sandbox="allow-scripts" title="Preview"></iframe>
+        <span class="card-preview-veil"></span>
+      </a>
+      <div class="card-body">
+        <h2 class="card-title"></h2>
+        <p class="card-desc muted"></p>
+        <div class="card-meta">
+          <span class="avatar"></span>
+          <div>
+            <span class="card-uploader"></span>
+            <span class="card-date muted"></span>
+          </div>
+        </div>
+      </div>
+      <footer class="card-foot">
+        <span class="tag"></span>
+        <div class="card-foot-actions">
+          <a class="btn btn-ghost card-open" target="_blank" rel="noopener">Open</a>
+          <a class="btn btn-ghost card-edit">Edit</a>
+          <button class="btn btn-ghost btn-danger card-delete" type="button">Delete</button>
+        </div>
+      </footer>
+    </article>
+  </template>
+
+  <script src="/js/session.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

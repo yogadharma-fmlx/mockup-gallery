@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create account · Mockup Containers</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🗂️</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span class="brand-mark">MC</span>
+      <span>Mockup Containers</span>
+    </a>
+    <nav class="topbar-actions">
+      <a class="btn btn-ghost" href="/">Back to gallery</a>
+    </nav>
+  </header>
+
+  <main class="page page-form">
+    <div class="page-head">
+      <h1>Create account</h1>
+    </div>
+
+    <form id="form" class="panel" data-mode="register" novalidate>
+      <div class="field">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" required>
+        <p class="muted field-hint">Shown on every mock-up you upload.</p>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="new-password" required>
+        <p class="muted field-hint">At least 8 characters.</p>
+      </div>
+
+      <p id="error" class="alert alert-error" hidden></p>
+
+      <div class="form-actions">
+        <button id="submit" class="btn btn-primary" type="submit">Create account</button>
+      </div>
+
+      <p class="muted form-foot">Already registered? <a href="/login">Sign in</a>.</p>
+    </form>
+  </main>
+
+  <script src="/js/session.js"></script>
+  <script src="/js/auth-form.js"></script>
+</body>
+</html>

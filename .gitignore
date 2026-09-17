@@ -141,3 +141,10 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Mockup Gallery runtime data — uploaded mock-ups, accounts and sessions
+uploads/
+data/
+
+# Claude Code local settings (machine-specific permissions)
+.claude/settings.local.json

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage users · Mockup Containers</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🗂️</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span class="brand-mark">MC</span>
+      <span>Mockup Containers</span>
+    </a>
+    <nav class="topbar-actions" id="nav"></nav>
+  </header>
+
+  <main class="page">
+    <div class="page-head">
+      <h1>Users</h1>
+      <p id="count" class="muted">Loading…</p>
+    </div>
+
+    <p id="error" class="alert alert-error" hidden></p>
+
+    <div class="table-wrap" id="table-wrap" hidden>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th class="num">Mock-ups</th>
+            <th>Joined</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+
+    <p class="muted page-note">
+      Admins can edit and delete any mock-up. Deleting an account keeps its mock-ups in the
+      gallery — they become admin-managed.
+    </p>
+  </main>
+
+  <script src="/js/session.js"></script>
+  <script src="/js/users.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit mock-up · Mockup Containers</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🗂️</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span class="brand-mark">MC</span>
+      <span>Mockup Containers</span>
+    </a>
+    <nav class="topbar-actions" id="nav"></nav>
+  </header>
+
+  <main class="page page-form">
+    <div class="page-head">
+      <h1>Edit mock-up</h1>
+      <a id="view-link" class="btn btn-ghost" target="_blank" rel="noopener" hidden>Open mock-up</a>
+    </div>
+
+    <p id="load-error" class="alert alert-error" hidden></p>
+
+    <form id="form" class="panel" novalidate hidden>
+      <div class="field">
+        <label for="name">Project name</label>
+        <input id="name" name="name" type="text" maxlength="120" required>
+      </div>
+
+      <div class="field">
+        <label for="description">Description <span class="muted">(optional)</span></label>
+        <textarea id="description" name="description" maxlength="500" rows="3"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="file">Replace files <span class="muted">(optional)</span></label>
+        <p id="current-files" class="muted field-hint"></p>
+        <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-controls="file">
+          <input id="file" name="file" type="file" accept=".html,.htm,.zip,text/html,application/zip" hidden>
+          <svg class="dropzone-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 16V4m0 0L8 8m4-4 4 4"/><path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>
+          </svg>
+          <p class="dropzone-text"><strong>Click to choose</strong> or drop a new .html or .zip</p>
+          <p class="muted dropzone-hint">Leave empty to keep the current files</p>
+        </div>
+        <p id="file-picked" class="file-picked" hidden></p>
+      </div>
+
+      <p id="error" class="alert alert-error" hidden></p>
+      <p id="success" class="alert alert-success" hidden></p>
+
+      <div class="form-actions">
+        <button id="submit" class="btn btn-primary" type="submit">Save changes</button>
+        <a class="btn btn-ghost" href="/">Cancel</a>
+        <span id="progress" class="muted" hidden></span>
+        <button id="delete" class="btn btn-ghost btn-danger form-actions-end" type="button">Delete mock-up</button>
+      </div>
+
+      <p id="owner-note" class="muted form-foot" hidden></p>
+    </form>
+  </main>
+
+  <script src="/js/session.js"></script>
+  <script src="/js/file-picker.js"></script>
+  <script src="/js/edit.js"></script>
+</body>
+</html>

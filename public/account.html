@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account settings · Mockup Containers</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🗂️</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span class="brand-mark">MC</span>
+      <span>Mockup Containers</span>
+    </a>
+    <nav class="topbar-actions" id="nav"></nav>
+  </header>
+
+  <main class="page page-form">
+    <div class="page-head">
+      <h1>Account settings</h1>
+      <p id="whoami" class="muted"></p>
+    </div>
+
+    <form id="profile-form" class="panel" novalidate>
+      <h2 class="panel-title">Profile</h2>
+      <div class="field">
+        <label for="name">Display name</label>
+        <input id="name" name="name" type="text" maxlength="80" required>
+        <p class="muted field-hint">Shown as the uploader on every mock-up you own.</p>
+      </div>
+      <p id="profile-error" class="alert alert-error" hidden></p>
+      <p id="profile-success" class="alert alert-success" hidden></p>
+      <div class="form-actions">
+        <button id="profile-submit" class="btn btn-primary" type="submit">Save profile</button>
+      </div>
+    </form>
+
+    <form id="password-form" class="panel" novalidate>
+      <h2 class="panel-title">Password</h2>
+      <div class="field">
+        <label for="current-password">Current password</label>
+        <input id="current-password" name="currentPassword" type="password" autocomplete="current-password" required>
+      </div>
+      <div class="field">
+        <label for="new-password">New password</label>
+        <input id="new-password" name="newPassword" type="password" autocomplete="new-password" required>
+        <p class="muted field-hint">At least 8 characters. Changing it signs you out everywhere.</p>
+      </div>
+      <p id="password-error" class="alert alert-error" hidden></p>
+      <div class="form-actions">
+        <button id="password-submit" class="btn btn-primary" type="submit">Change password</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="/js/session.js"></script>
+  <script src="/js/account.js"></script>
+</body>
+</html>
